@@ -23,7 +23,7 @@ export class AnalyzeService {
 
         if (areEqual) {
             percentArray.push(100);
-
+            // REVIEW: One line
             const analyzeData = new AnalyzeData(
                 percentArray,
                 new Map(),

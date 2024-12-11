@@ -9,6 +9,7 @@ import { UserRoleGuard } from './role/userRole.guard';
 @Module({
     imports: [MikroOrmModule.forFeature([User])],
     controllers: [UserController],
+    // REVIEW: Je důvod mít UserRolGuarda providnutého tady (globálně)?
     providers: [{ provide: APP_GUARD, useClass: UserRoleGuard }, UserService],
     exports: [UserService, MikroOrmModule],
 })

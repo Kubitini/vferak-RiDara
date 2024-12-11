@@ -7,7 +7,7 @@ async function bootstrap() {
     app.enableCors();
     app.enableShutdownHooks();
 
-    await app.listen(3000);
+    await app.listen(3000); // REVIEW: port z configu?
 }
 
 bootstrap();

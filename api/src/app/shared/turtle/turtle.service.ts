@@ -4,6 +4,8 @@ import * as N3 from 'n3/lib';
 import { CreateNodeOntologyDto } from '../../ontology/dto/create-node-ontology.dto';
 import { TurtleData } from './turtle.data';
 
+// REVIEW: Funkce by šly dále rozpadnout na menší srozumitelnější části
+// REVIEW: Test?
 @Injectable()
 export class TurtleService {
     public parseTurtleFile(fileBuffer: Buffer): TurtleData {

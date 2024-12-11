@@ -1,0 +1,10 @@
+- pros:
+- cons:
+    - Nasetupovaný prettier, ale není všude použit
+    - Config čtený jako 'any' i když víme jak má vypadat
+    - User routy vrací celý User objekt => vrací i password na api!
+    - Naming
+        - Popisnější názvy proměnných
+        - Př. areEqual, analyzeData => analyzedData
+    - Moc dlouhé funkce
+

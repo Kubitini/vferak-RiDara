@@ -16,3 +16,5 @@ export default (isTest: boolean = false) => {
         ),
     ) as Record<string, any>;
 };
+
+// REVIEW: Proč používáš yaml?

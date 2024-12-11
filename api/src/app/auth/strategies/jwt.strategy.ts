@@ -7,7 +7,7 @@ import { UserService } from '../../shared/user/user.service';
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
     constructor(
-        private readonly apiConfigService: ApiConfigService,
+        private readonly apiConfigService: ApiConfigService, // REVIEW: Proč to mít na this(u)
         private readonly userService: UserService,
     ) {
         super({
@@ -16,7 +16,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
             secretOrKey: apiConfigService.getJwt().secret_key,
         });
     }
-
+    // REVIEW: Proč používat any, když víme jaký JSON máme v tokenu
     async validate(payload: any) {
         return this.userService.getOneByUuid(payload.uuid);
     }

@@ -18,7 +18,7 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
         const user = await this.userService.findOneByEmail(username);
         if (
             user === null ||
-            !(await this.bcryptService.compare(password, user.getPassword()))
+            !(await this.bcryptService.compare(password, user.getPassword())) // REVIEW: Do metody?
         ) {
             throw new UnauthorizedException();
         }
