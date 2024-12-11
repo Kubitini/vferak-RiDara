@@ -12,6 +12,6 @@ RUN npm install
 
 EXPOSE 3000
 
-USER node
+# USER node
 
 CMD npm run start:dev
